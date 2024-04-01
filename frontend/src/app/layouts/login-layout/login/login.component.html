@@ -1,0 +1,45 @@
+<div class="login">
+    <div class="center ds-mb-3">
+        <img src="../../../../assets/image/logo.svg" alt="Logo da decisão sistemas" />
+    </div>
+
+    <h2 class="title center ds-mb-2">Seja bem vindo</h2>
+    <p class="center">Insira seus dados e acesse a plataforma</p>
+
+    <form class="ds-row center ds-mb-3 ds-mx-0 w-full">
+        <div class="ds-row center ds-mb-3 ds-mx-0">
+            <div class="ds-col-4 w-full">
+                <ds-input-text class="w-full" [labelInput]="'E-mail'"
+                    [placeholderInputText]="'Insira seu e-mail'"></ds-input-text><!-- [control]="loginForm.controls.email" -->
+            </div>
+        </div>
+
+        <div class="ds-row center ds-mb-3 ds-mx-0">
+            <div class="ds-col-4 w-full">
+                <ds-input-text class="w-full" [labelInput]="'Senha'"
+                    [placeholderInputText]="'Insira sua senha'"></ds-input-text><!-- [control]="loginForm.controls.senha" -->
+            </div>
+        </div>
+
+        <div class="ds-row center ds-mb-3 ds-mx-0">
+            <div class="ds-col-4 w-full">
+                <ds-checkbox [labelCheckbox]="'Lembrar-me'"></ds-checkbox>
+            </div>
+        </div>
+
+        <div class="ds-row center ds-mb-3 ds-mx-0">
+            <div class="ds-col-4 w-full">
+                <ds-button class="ds-d-inline-block w-full" [tipoBotao]="'PRIMARY'"
+                    [labelButton]="'Entrar'"></ds-button><!-- [isDesabilitado]="loginForm.invalid"
+                (click)="login()" -->
+            </div>
+        </div>
+
+        <div class="center">* Campos obrigatórios</div>
+
+        <div class="center">
+            Não possui cadastro?
+            <a class="ds-ml-2" [routerLink]="'/create-account'">Faça seu cadastro aqui!</a>
+        </div>
+    </form>
+</div>

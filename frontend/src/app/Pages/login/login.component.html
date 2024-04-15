@@ -1,0 +1,48 @@
+<div class="login ds-row">
+    <div>
+        <img src="../../../../assets/image/logo.svg" alt="Logo da decisão sistemas" />
+    </div>
+    
+    <div>
+        <h2 class="ds-color-secondary-300 ds-pt-3">Seja bem vindo!</h2>
+        <p class="ds-pt-2">Insira seus dados e acesse a plataforma</p>
+    </div>
+    <form class="ds-align-items-center ds-align-items-center ds-flex-column ds-col-6">
+         
+        <div class="ds-pt-3 ds-row ds-col-12">
+            <ds-input-text 
+            [labelInput]="'E-mail'" 
+            [placeholderInputText]="'Insira seu e-mail'"
+            ></ds-input-text>
+        </div>
+
+        <div class="ds-pt-3 ds-row ds-col-12">
+            <ds-input-text
+                [labelInput]="'Senha'" 
+                [placeholderInputText]="'Insira a nova senha'"
+            ></ds-input-text>
+        </div>
+
+        <div class="ds-pt-3 ds-row ds-col-12">
+            <ds-checkbox [labelCheckbox]="'Lembrar-me'"></ds-checkbox>
+        </div>
+
+        <div class="ds-pb-3 ds-pt-3 ds-row ds-col-12">
+            <ds-button 
+                [tipoBotao]="'PRIMARY'"
+                [labelButton]="'Criar conta'"
+                class="ds-col-12"
+            ></ds-button>
+        </div>
+
+    </form>
+    
+    <div>
+        <span>* Campos obrigatórios</span>
+    </div>
+
+    <div class="ds-pt-3">
+        <span>Já possui cadastro?</span>
+        <a class="ds-ml-2" [routerLink]="'/create-account'">Faça Log in</a>
+    </div>
+</div>

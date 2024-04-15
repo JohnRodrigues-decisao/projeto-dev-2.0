@@ -8,13 +8,13 @@ import { LoginLayoutModule } from './layouts/login-layout/login-layout.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LoginLayoutModule,
-    LoggedLayoutModule,
+    LoggedLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

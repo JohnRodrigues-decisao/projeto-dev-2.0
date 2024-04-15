@@ -1,0 +1,14 @@
+.listar-titulos{
+    .lista-vazia{
+        height: calc(100vh - 280px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .lista-vazia-container{
+            text-align: center;
+        }
+    }
+    .titulo-box-card{
+        border-radius: 8px 8px 0 0;
+    }
+}

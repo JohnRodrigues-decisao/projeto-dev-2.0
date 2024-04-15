@@ -1,0 +1,48 @@
+.nav{
+    position: absolute;
+    width: 52px;
+    height: calc(100vh - 52px);
+    background: #FFFFFF;
+    top: 52px;
+    
+    .nav-container{
+        position: relative;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-item{
+        text-decoration: none;
+        border: none;
+        display: flex; 
+        cursor: pointer; 
+        width: 100%; 
+        height: 52px;
+        p{
+            display: none;
+        }
+    }
+    
+    .nav-item:hover{
+        position: relative;
+        width: 170px;
+        height: 52px;
+        display: flex;
+        justify-content: flex-start;
+        border-left: 5px solid #735CE6;
+        background: #FFFFFF;
+        z-index: 2;
+        img{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        p{
+            width: 200px;
+            display: block;
+            padding: 0;
+            text-align: start;
+            color: #735CE6;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.main-conainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-right: 15px;
+    .main-box{
+        text-align: center;
+        h2{
+            color: #4A5056;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 28px;
+        }
+    }
+}

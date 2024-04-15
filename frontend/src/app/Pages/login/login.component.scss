@@ -1,8 +1,9 @@
-.account{
-    height: 100vh;
+.login{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.text-start{
+    text-align: start;
+}

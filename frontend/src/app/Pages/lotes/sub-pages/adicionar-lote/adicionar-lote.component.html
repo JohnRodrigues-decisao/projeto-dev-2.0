@@ -1,0 +1,97 @@
+<div class="adicionar-lote">
+
+    <div class="ds-py-2 ds-d-flex ds-justify-content-between d ds-p-3 border-rounded-bt">
+        <div class="ds-d-flex ds-align-items-center">
+            <p class="ds-pr-2">Data do lote:</p>
+            <span>04/03/2024</span>
+        </div>
+        <div class="ds-d-flex ds-align-items-center">
+            <p class="ds-pr-2">Quantidade de títulos:</p>
+            <span>0</span>
+        </div>
+        <div class="ds-d-flex ds-align-items-center">
+            <p class="ds-pr-2">Valor total dos títulos:</p>
+            <span>R$ 0,00</span>
+        </div>
+        <div class="ds-d-flex ds-align-items-center">
+            <p class="ds-pr-2">Situação:</p>
+            <ds-badge [labelBadge]="'Não enviado'" [icone]="''" [tipoBadge]="'GRAY-OUTLINE-DISABLED'"></ds-badge>
+        </div>
+    </div>
+
+    <div class="adicionar-lote-main ds-d-flex">
+        <div class="adicionar-titulos ds-col-8 ds-p-3">
+            <div class="ds-mb-3">
+                <h5>Adicionar títulos</h5>
+            </div>
+
+            <div class="adicionar-titulos-input">
+                <ds-input-select [labelInput]="'Tipo do título'" [placeholderInputSelect]="'Selecione'"
+                    [listaOptions]="[{label: 'Label 1', valor: 'Valor 1'}, {label: 'Label 2', valor: 'Valor 2'}]"
+                    [posicaoLista]="'BAIXO'"></ds-input-select><!-- (valueChangeEvento)="valueChangeEvento($event)" -->
+            </div>
+
+            <div class="ds-row">
+                <div class="ds-col-4">
+                    <ds-input-select [labelInput]="'Tipo do título'" [placeholderInputSelect]="'Selecione'"
+                        [listaOptions]="[{label: 'Label 1', valor: 'Valor 1'}, {label: 'Label 2', valor: 'Valor 2'}]"
+                        [posicaoLista]="'BAIXO'"></ds-input-select><!-- (valueChangeEvento)="valueChangeEvento($event)" -->
+                </div>
+                <div class="ds-col-4">
+                    <ds-input-select [labelInput]="'Tipo do título'" [placeholderInputSelect]="'Selecione'"
+                        [listaOptions]="[{label: 'Label 1', valor: 'Valor 1'}, {label: 'Label 2', valor: 'Valor 2'}]"
+                        [posicaoLista]="'BAIXO'"></ds-input-select><!-- (valueChangeEvento)="valueChangeEvento($event)" -->
+                </div>
+                <div class="ds-col-4">
+                    <ds-input-select [labelInput]="'Tipo do título'" [placeholderInputSelect]="'Selecione'"
+                        [listaOptions]="[{label: 'Label 1', valor: 'Valor 1'}, {label: 'Label 2', valor: 'Valor 2'}]"
+                        [posicaoLista]="'BAIXO'"></ds-input-select><!-- (valueChangeEvento)="valueChangeEvento($event)" -->
+                </div>
+            </div>
+
+            <div class="ds-mb-3">
+                <h5>Pagador</h5>
+            </div>
+
+            <div class="ds-row">
+                <div class="ds-col-3">
+                    <ds-input-select [labelInput]="'Tipo do título'" [placeholderInputSelect]="'Selecione'"
+                        [listaOptions]="[{label: 'Label 1', valor: 'Valor 1'}, {label: 'Label 2', valor: 'Valor 2'}]"
+                        [posicaoLista]="'BAIXO'"></ds-input-select><!-- (valueChangeEvento)="valueChangeEvento($event)" -->
+                </div>
+
+                <div class="ds-col-9">
+                    <ds-input-select [labelInput]="'Tipo do título'" [placeholderInputSelect]="'Selecione'"
+                        [listaOptions]="[{label: 'Label 1', valor: 'Valor 1'}, {label: 'Label 2', valor: 'Valor 2'}]"
+                        [posicaoLista]="'BAIXO'"></ds-input-select><!-- (valueChangeEvento)="valueChangeEvento($event)" -->
+                </div>
+            </div>
+
+            <div class="ds-d-flex ds-justify-content-end ds-my-4">
+                <div class="ds-d-flex">
+                    <ds-button [labelButton]="'Cancelar'" [iconeEsquerda]="'ds-icon-close'" [iconeDireita]="null"
+                        [isDesabilitado]="false" [tipoBotao]="'SYSTEM'"></ds-button>
+
+                    <ds-button [labelButton]="'Salvar título'" [iconeEsquerda]="'ds-icon-check'" [iconeDireita]="null"
+                        [isDesabilitado]="true" [tipoBotao]="'SYSTEM'" class="ds-ml-3"></ds-button>
+
+                    
+                    <ds-button [labelButton]="'Enviar lote'" [iconeEsquerda]="null" [iconeDireita]="'ds-icon-right'"
+                        [isDesabilitado]="true" [tipoBotao]="'SYSTEM'" class="ds-ml-3"></ds-button>
+                </div>
+            </div>
+        </div>
+
+        <div class="titulos ds-col-4 border-rounded-l ds-p-3">
+            <h5 class="ds-mb-4">Títulos</h5>
+
+            <div class="sem-title">
+                <div class="sem-title-card">
+                    <img class="ds-mb-3" src="../../../../../assets/image/no-title.svg" alt="">
+                    <h5 class="ds-mb-2">Nenhum título adicionado ainda.</h5>
+                    <p>Após incluir o primeiro, você poderá visualizar a lista de títulos aqui</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

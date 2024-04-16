@@ -13,7 +13,7 @@ import { ButtonModule } from '@decisaosistemas/angular-ds';
   imports: [
     CommonModule,
     LotesRoutingModule,
-    ButtonModule
+    ButtonModule,
   ],
 })
 export class LotesModule { }

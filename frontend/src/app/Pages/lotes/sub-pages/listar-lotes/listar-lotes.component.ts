@@ -14,3 +14,4 @@ export class ListarLotesComponent {
     {qtnTitulos: 23, status: 'não enviado', dataLote: '04/03/2024', dataEnvio: '11/04/2024', valorTotalLote: 123456789},
   ]
 }
+ 

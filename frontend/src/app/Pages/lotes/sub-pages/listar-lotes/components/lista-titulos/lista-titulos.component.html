@@ -1,49 +1,51 @@
-<div *ngFor="let Lote of listaLotes" class="titulos-box ds-col-4"> 
+<div class="lista-titulos-container ds-row">
+    <div *ngFor="let Lote of listaLotes" class="titulos-box ds-col-4"> 
 
-    <div class="titulo-card ds-border-radius-medium ds-shadow-md ds-mb-4 "> 
-        <div class="titulo-box-card ds-d-flex ds-align-items-center ds-justify-content-between ds-p-3 ds-bg-primary-100">
-            <span><strong>{{ Lote.qtnTitulos }} Titulos</strong></span>
-            <ds-button
-            [labelButton]="'Não enviado'"
-            [iconeEsquerda]="null"
-            [iconeDireita]="null"
-            [isDesabilitado]="true"
-            [tipoBotao]="'SECONDARY'"
-          ></ds-button>
-        </div>
-        
-        <div class="ds-p-3">
-            <div class="ds-d-flex ds-align-items-center ds-justify-content-between">
-                <div>
-                    <p>Data do lote</p>
-                    <span>04/03/2023</span>
-                </div>
-                <div>
-                    <p>Envio</p>
-                    <span>12/04/2024</span>
-                </div>
-            </div>
-
-            <div class="ds-py-2">
-                <ds-divider [orientacao]="'horizontal'" [sizeDivider]="'medium'"></ds-divider>
-            </div>
-
-            <div class="ds-pb-2">
-                <p>Valor total do lote</p>
-                <span>R$ 1.234.567.890,00</span>
+        <div class="titulo-card ds-border-radius-medium ds-shadow-md ds-mb-4 "> 
+            <div class="titulo-box-card ds-d-flex ds-align-items-center ds-justify-content-between ds-p-3 ds-bg-primary-100">
+                <span><strong>{{ Lote.qtnTitulos }} Titulos</strong></span>
+                <ds-button
+                [labelButton]="'Não enviado'"
+                [iconeEsquerda]="null"
+                [iconeDireita]="null"
+                [isDesabilitado]="true"
+                [tipoBotao]="'SECONDARY'"
+              ></ds-button>
             </div>
             
-            <div class="ds-row">
-                <ds-button-dropdown
-                [labelButtonDropdown]="'Ações'"
-                [iconeLabel]="null"
-                [isDesabilitado]="false"
-                [orientacaoLista]="'CIMA'"
-                [tipoBotao]="'SECONDARY'"
-                >
-                </ds-button-dropdown>
+            <div class="ds-p-3">
+                <div class="ds-d-flex ds-align-items-center ds-justify-content-between">
+                    <div>
+                        <p>Data do lote</p>
+                        <span>04/03/2023</span>
+                    </div>
+                    <div>
+                        <p>Envio</p>
+                        <span>12/04/2024</span>
+                    </div>
+                </div>
+    
+                <div class="ds-py-2">
+                    <ds-divider [orientacao]="'horizontal'" [sizeDivider]="'medium'"></ds-divider>
+                </div>
+    
+                <div class="ds-pb-2">
+                    <p>Valor total do lote</p>
+                    <span>R$ 1.234.567.890,00</span>
+                </div>
+                
+                <div class="ds-row">
+                    <ds-button-dropdown
+                    [labelButtonDropdown]="'Ações'"
+                    [iconeLabel]="null"
+                    [isDesabilitado]="false"
+                    [orientacaoLista]="'CIMA'"
+                    [tipoBotao]="'SECONDARY'"
+                    >
+                    </ds-button-dropdown>
+                </div>
             </div>
         </div>
+    
     </div>
-
 </div>

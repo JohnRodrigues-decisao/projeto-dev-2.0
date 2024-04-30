@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalDefaultComponent } from './modal-default.component';
+import { ModalFiltroComponent } from './modal-filtro.component';
 
-describe('ModalDefaultComponent', () => {
-  let component: ModalDefaultComponent;
-  let fixture: ComponentFixture<ModalDefaultComponent>;
+describe('ModalFiltroComponent', () => {
+  let component: ModalFiltroComponent;
+  let fixture: ComponentFixture<ModalFiltroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ModalDefaultComponent]
+      declarations: [ModalFiltroComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ModalDefaultComponent);
+    fixture = TestBed.createComponent(ModalFiltroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

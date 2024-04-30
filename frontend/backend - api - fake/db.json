@@ -1,0 +1,46 @@
+{
+    "Lote": [
+        {
+            "id": 1
+        },
+        {
+            "id": 2
+        }
+    ],
+    "titulo": [
+        {
+            "id": 1,
+            "tipoTitulo": "Duplicata",
+            "idPagador": 1234567,
+            "nomePagador": "Fulano de Tal",
+            "numeroTitulo": "123456",
+            "valorTitulo": 1000.50,
+            "cmc7": "12312",
+            "vencimentoTitulo": "2024-04-15T12:00:00Z",
+            "duplicataChaveNota": "12312312",
+            "duplicataProtocoloNota": "123123",
+            "duplicataNumeroNota": "12312",
+            "duplicataSerieNota": "12312",
+            "duplicataDataEmissao": "2024-04-15T12:00:00Z",
+            "duplicataValorLiquidoFatura": "123131231",
+            "duplicataNumeroFatura": "312312"
+        },
+        {
+            "id": 2,
+            "tipoTitulo": "Duplicata",
+            "idPagador": 1234567,
+            "nomePagador": "Fulano de Tal",
+            "numeroTitulo": "123456",
+            "valorTitulo": 1000.50,
+            "cmc7": "12312",
+            "vencimentoTitulo": "2024-04-15T12:00:00Z",
+            "duplicataChaveNota": "12312312",
+            "duplicataProtocoloNota": "123123",
+            "duplicataNumeroNota": "12312",
+            "duplicataSerieNota": "12312",
+            "duplicataDataEmissao": "2024-04-15T12:00:00Z",
+            "duplicataValorLiquidoFatura": "123131231",
+            "duplicataNumeroFatura": "312312"
+        }
+    ]
+}

@@ -26,90 +26,84 @@
                 </div>
 
                 <div class="adicionar-titulos-input">
-                    <ds-input-select 
-                        [labelInput]="'Tipo do título'" 
-                        [placeholderInputSelect]="'Selecione'"
+                    <ds-input-select [labelInput]="'Tipo do título'" [placeholderInputSelect]="'Selecione'"
                         [listaOptions]="[{label: 'Cheque', valor: 'Cheque'}, {label: 'Duplicata', valor: 'Duplicata'}, {label: 'Nota promissóriria', valor: 'Nota Promissoria'}]"
                         [posicaoLista]="'BAIXO'"
-                        (valueChangeEvento)="selecaoDeTipoDeTitulo($event.valor)"
-                    ></ds-input-select>
-                </div> 
-
-                <!-- START: Nota promissória --> 
+                        (valueChangeEvento)="selecaoDeTipoDeTitulo($event.valor)"></ds-input-select>
+                </div>
 
                 <div class="nota-promissoria">
                     <div class="ds-row">
                         <div class="ds-col-4">
-                            <ds-input-text [control]="formularioCadastroLote.controls.nomeTitulo" [labelInput]="'Número do título'" [placeholderInputText]="''"
+                            <ds-input-text [control]="formularioCadastroLote.controls.nomeTitulo"
+                                [labelInput]="'Número do título'" [placeholderInputText]="''"
                                 [erroLabel]="'um nome para o título valido!'"></ds-input-text>
                         </div>
                         <div class="ds-col-4">
-                            <ds-input-text [control]="formularioCadastroLote.controls.valorTitulo" [labelInput]="'Valor do título'" [erroLabel]="'o valor do título valido!'"
+                            <ds-input-text [control]="formularioCadastroLote.controls.valorTitulo"
+                                [labelInput]="'Valor do título'" [erroLabel]="'o valor do título valido!'"
                                 [placeholderInputText]="'0,00'" [icone]="'ds-icon-coin-less'"></ds-input-text>
                         </div>
                         <div class="ds-col-4">
-                            <ds-input-date [control]="formularioCadastroLote.controls.vencimentoTitulo" [labelInput]="'Vencimento'"
-                                [erroLabel]="'uma data de vencimento valida!'"
+                            <ds-input-date [control]="formularioCadastroLote.controls.vencimentoTitulo"
+                                [labelInput]="'Vencimento'" [erroLabel]="'uma data de vencimento valida!'"
                                 [placeholderInputDate]="'Placeholder'"></ds-input-date>
                         </div>
                     </div>
-                
+
                     <div class="ds-my-3">
                         <h5>Pagador</h5>
                     </div>
-                
+
                     <div class="ds-row">
-                        <div class="ds-col-3"> 
-                
+                        <div class="ds-col-3">
+
                             <div class="rs-row">
-                                <ds-input-text [control]="formularioCadastroLote.controls.nomePagador" [labelInput]="'Nome'"
-                                    [placeholderInputText]="''" [erroLabel]="'um nome valido!'"></ds-input-text>
+                                <ds-input-text [control]="formularioCadastroLote.controls.nomePagador"
+                                    [labelInput]="'Nome'" [placeholderInputText]="''"
+                                    [erroLabel]="'um nome valido!'"></ds-input-text>
                             </div>
                         </div>
-                
+
                         <div class="ds-col-9">
-                            <ds-input-text [control]="formularioCadastroLote.controls.cpfCnpjPagador" [labelInput]="'CPF/CNPJ'"
-                                [placeholderInputText]="''" [erroLabel]="'um CPF ou CNPJ valido!'"></ds-input-text>
+                            <ds-input-text [control]="formularioCadastroLote.controls.cpfCnpjPagador"
+                                [labelInput]="'CPF/CNPJ'" [placeholderInputText]="''"
+                                [erroLabel]="'um CPF ou CNPJ valido!'"></ds-input-text>
                         </div>
                     </div>
                 </div>
 
-                <!-- Buttons -->
                 <div class="ds-d-flex ds-justify-content-end ds-my-4">
                     <div class="ds-d-flex">
                         <a href="/enviar-titulo">
-                            <ds-button [labelButton]="'Cancelar'" [iconeEsquerda]="'ds-icon-close'" [iconeDireita]="null"
-                            [isDesabilitado]="false" [tipoBotao]="'SYSTEM'"></ds-button>
+                            <ds-button [labelButton]="'Cancelar'" [iconeEsquerda]="'ds-icon-close'"
+                                [iconeDireita]="null" [isDesabilitado]="false" [tipoBotao]="'SYSTEM'"></ds-button>
                         </a>
-            
-                        <ds-button (click)="salvarLote()" [labelButton]="'Salvar título'" [iconeEsquerda]="'ds-icon-check'"
-                            [iconeDireita]="null" [tipoBotao]="'SYSTEM'"
+
+                        <ds-button (click)="salvarLote()" [labelButton]="'Salvar título'"
+                            [iconeEsquerda]="'ds-icon-check'" [iconeDireita]="null" [tipoBotao]="'SYSTEM'"
                             class="ds-ml-3"></ds-button>
-            
-            
+
+
                         <ds-button [labelButton]="'Enviar lote'" [iconeEsquerda]="null" [iconeDireita]="'ds-icon-right'"
                             [isDesabilitado]="true" [tipoBotao]="'SYSTEM'" class="ds-ml-3"></ds-button>
                     </div>
                 </div>
 
             </div>
-        </div> 
+        </div>
 
-        <!-- TÍTULOS -->
         <div class="titulos ds-col-4 border-rounded-l ds-p-3">
             <h5 class="ds-mb-4">Títulos</h5>
 
-            <div *ngIf="listaBoxTitulos.length === 0" class="lista-vazia" >
+            <div *ngIf="listaBoxTitulos.length === 0" class="lista-vazia">
                 <app-sem-titulo></app-sem-titulo>
             </div>
-            
-            <!-- <div *ngIf="listaBoxTitulos.length > 0" class="lista-titulos ds-row border-rounded ds-pb-4 ds-px-3">  -->
-                <!-- <app-com-titulo></app-com-titulo> -->
-            <!-- </div> -->
+
+            <div *ngIf="listaBoxTitulos.length > 0" class="lista-titulos ds-row border-rounded ds-pb-4 ds-px-3">
+                <app-com-titulo></app-com-titulo>
+            </div>
 
         </div>
     </div>
 </div>
-
-
-<!-- https://www.youtube.com/watch?v=8ZlrORYOl_0 -->

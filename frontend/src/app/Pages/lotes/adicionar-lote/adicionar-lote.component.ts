@@ -1,14 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { tipoDoTitulo } from '../../../Shared/models/tipoDoTitulo.enum';
+import { NTitulos } from '../../../Shared/models/titulosNamespace';
+import { TituloService } from '../../../Shared/services/http/titulo.service';
 
 @Component({
   selector: 'app-adicionar-lote',
   templateUrl: './adicionar-lote.component.html',
   styleUrl: './adicionar-lote.component.scss'
 })
-export class AdicionarLoteComponent {
-  public tipoDoTitulo!: tipoDoTitulo | null; 
+export class AdicionarLoteComponent implements OnInit {
+  public tipoDoTitulo!: tipoDoTitulo | null;
+  public listarTitulo: NTitulos.IListarTituloInterface[] = [];
+
+  constructor(private tituloService: TituloService) { }
+
+  public async ngOnInit(): Promise<void> {
+    this.listarTitulo = await this.listaBoxTitulos();
+  }
 
   public formularioCadastroLote = new FormGroup({
     tipoTitulo: new FormControl<boolean | null>(null, Validators.required),
@@ -28,14 +37,14 @@ export class AdicionarLoteComponent {
     return true;
   }
 
-  public listaBoxTitulos() {}
+  loteCadastroFormSubmit() { }
 
-  loteCadastroFormSubmit(){
-    
-  } 
-
-  public async salvarLote(): Promise<void>{
-    console.log(this.formularioCadastroLote)
+  public async listaBoxTitulos(): Promise<NTitulos.IListarTituloInterface[]> {
+    const titulosDB = (await this.tituloService.listarTitulo()).dados as NTitulos.IListarTituloInterface[];
+    return titulosDB;
   }
 
+  public async salvarLote(): Promise<void> {
+    console.log(this.formularioCadastroLote)
+  }
 }

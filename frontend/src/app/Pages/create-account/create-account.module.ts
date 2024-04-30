@@ -17,7 +17,7 @@ import { CreateAccountComponent } from './create-account.component';
     InputModule,
     ButtonModule,
     CheckboxModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CreateAccountModule { }

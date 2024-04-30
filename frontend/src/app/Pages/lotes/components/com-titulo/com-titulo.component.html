@@ -1,0 +1,464 @@
+<div class="com-titulos">
+    <div>
+        <ds-input-search [labelInput]="'Label'" [placeholderInputSearch]="'Buscar título'"></ds-input-search>
+        <!-- (valueChangeEvento)="valueChangeEvento($event)" -->
+    </div>
+    <div>
+        <ds-checkbox [labelCheckbox]="'Marcar todos'" [formControl]="undefined" [isDesabilitado]="false"
+            [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+    </div>
+
+    <div class="titulos-inconsistentes">
+        <div class="ds-d-flex ds-mt-3">
+            <span class="ds-mr-1"><strong>Títulos inconsistentes</strong></span>
+            <ds-icon [icone]="'ds-icon-circle-info'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+        </div>
+
+        <div>
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-receipt-multiple'" [tooltipLabel]="'Tooltip'"
+                                [tooltipPosition]="'AUTO'" [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">DP-01234</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-invoice'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">NP-23148A</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cheques">
+        <div class="ds-d-flex ds-mt-3 ds-mb-2">
+            <span class="ds-mr-1"><strong>Cheques</strong></span>
+        </div>
+
+        <div>
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-receipt-edit'" [tooltipLabel]="'Tooltip'"
+                                [tooltipPosition]="'AUTO'" [corIcone]="'CONFIRM'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">CH-023148</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-receipt-edit'" [tooltipLabel]="'Tooltip'"
+                                [tooltipPosition]="'AUTO'" [corIcone]="'CONFIRM'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">CH-023148</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="duplicatas">
+        <div class="ds-d-flex ds-mt-3 ds-mb-2">
+            <span class="ds-mr-1"><strong>Duplicatas</strong></span>
+        </div>
+
+        <div>
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-receipt-multiple'" [tooltipLabel]="'Tooltip'"
+                                [tooltipPosition]="'AUTO'" [corIcone]="'CONFIRM'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">CH-023148</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-receipt-multiple'" [tooltipLabel]="'Tooltip'"
+                                [tooltipPosition]="'AUTO'" [corIcone]="'CONFIRM'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">CH-023148</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="notas-promissorias">
+        <div class="ds-d-flex ds-mt-3 ds-mb-2">
+            <span class="ds-mr-1"><strong>Notas promissórias</strong></span>
+        </div>
+
+        <div>
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-invoice'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'CONFIRM'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">NP-23148A</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-titulos ds-p-3 ds-mb-3">
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex">
+                        <div>
+                            <ds-checkbox [labelCheckbox]="''" [formControl]="undefined" [isDesabilitado]="false"
+                                [isChecked]="false" (changeEvento)="changeEvento($event)"></ds-checkbox>
+                        </div>
+
+                        <div class="ds-d-flex ds-ml-2">
+                            <ds-icon [icone]="'ds-icon-invoice'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'CONFIRM'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                            <span class="ds-ml-1">NP-23148A</span>
+                        </div>
+                    </div>
+
+                    <div class="ds-d-flex">
+                        <div class="ds-mr-2">
+                            <ds-icon [icone]="'ds-icon-edit'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'PRIMARY'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                        <div>
+                            <ds-icon [icone]="'ds-icon-trash'" [tooltipLabel]="'Tooltip'" [tooltipPosition]="'AUTO'"
+                                [corIcone]="'DANGER'" [tamanhoIcone]="'MEDIUM'"></ds-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ds-d-flex ds-justify-content-between ds-mb-2">
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Valor</span>
+                        <span>R$: <strong>1.234.567.890,00</strong></span>
+                    </div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>Vencimento</span>
+                        <span>04/03/2024</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="ds-d-flex ds-flex-column">
+                        <span>
+                            Pagador
+                        </span>
+                        <div class="ds-d-flex ds-justify-content-between">
+                            <p class="descricao-card-title ds-m-0">Pagador do Nome Grande Extenso de Muitos Caracteres
+                                Escritos Para Preencher Um Texto Gigante</p>
+                            <span class="descricao-card-identificacao">- 010.101.010-00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

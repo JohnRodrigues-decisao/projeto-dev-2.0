@@ -1,0 +1,49 @@
+<div class="">
+
+    <div class="ds-row ds-mb-3">
+        <div class="ds-col-5">
+
+            <div class="rs-row">
+                <ds-input-text [labelInput]="'CMC7'" [control]="loteCadastroForm.controls.cpfCnpjPagador"
+                    [placeholderInputText]="''" [erroLabel]="'um CMC7 valido!'"></ds-input-text>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-row ds-mb-3">
+        <div class="ds-col-4">
+            <ds-input-text [labelInput]="'Número do título'"
+                [control]="loteCadastroForm.controls.nomeTitulo" [placeholderInputText]="''"
+                [erroLabel]="'um nome para o título valido!'"></ds-input-text>
+        </div>
+        <div class="ds-col-4">
+            <ds-input-text [labelInput]="'Valor do título'"
+                [control]="loteCadastroForm.controls.valorTitulo" [erroLabel]="'o valor do título valido!'"
+                [placeholderInputText]="'0,00'" [icone]="'ds-icon-coin-less'"></ds-input-text>
+        </div>
+        <div class="ds-col-4">
+            <ds-input-date [labelInput]="'Vencimento'"
+                [control]="loteCadastroForm.controls.vencimentoTitulo"
+                [erroLabel]="'uma data de vencimento valida!'"
+                [placeholderInputDate]="'Placeholder'"></ds-input-date>
+        </div>
+    </div>
+
+    <div class="ds-mb-3">
+        <h5>Pagador</h5>
+    </div>
+
+    <div class="ds-row ">
+        <div class="ds-col-3">
+            <ds-input-text [labelInput]="'CPF/CNPJ'" [control]="loteCadastroForm.controls.nomePagador"
+            [placeholderInputText]="''" [erroLabel]="'um CPF ou CNPJ valido!'"></ds-input-text>
+        </div>
+
+        <div class="ds-col-9">
+            <div class="rs-row">
+                <ds-input-text [labelInput]="'Nome'" [control]="loteCadastroForm.controls.cpfCnpjPagador"
+                    [placeholderInputText]="''" [erroLabel]="'um nome valido!'"></ds-input-text>
+            </div>
+        </div>
+    </div>
+</div>

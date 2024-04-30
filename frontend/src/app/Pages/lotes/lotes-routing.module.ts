@@ -10,23 +10,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./sub-pages/listar-lotes/listar-lotes.module').then((m) => m.ListarLotesModule),
+        loadChildren: () => import('./listar-lotes/listar-lotes.module').then((m) => m.ListarLotesModule),
       },
       {
         path: 'adicionar-titulo',
-        loadChildren: () => import('./sub-pages/adicionar-lote/adicionar-lote.module').then((m) => m.AdicionarLoteModule),
+        loadChildren: () => import('./adicionar-lote/adicionar-lote.module').then((m) => m.AdicionarLoteModule),
       },
     ]
   }
 ];
-
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: EnviarTitulosComponent,
-//   },
-
-// ]; 
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+
+
 @font-face {
     font-family: 'Inter-Regular';
     src: url(./assets/fonts/Inter-400.woff2);
@@ -20,4 +23,8 @@ body{
 
 .text-start{
     text-align: start;
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }

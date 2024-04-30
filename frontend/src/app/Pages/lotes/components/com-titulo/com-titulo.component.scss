@@ -1,0 +1,17 @@
+.card-titulos{
+    border-radius: 4px;
+    border: 1px solid var(--Main-Danger-Base, #EE2D3D);
+    background: var(--Grayscale-0, #FFF);   
+}
+
+.descricao-card-title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.descricao-card-identificacao{
+    width: 180px;
+    text-align: end;
+}

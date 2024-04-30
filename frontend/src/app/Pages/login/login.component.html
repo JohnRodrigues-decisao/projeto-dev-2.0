@@ -8,35 +8,40 @@
         <p class="ds-pt-2">Insira seus dados e acesse a plataforma</p>
     </div>
 
-    <form>
+    <div>
          
         <div class="ds-pb-3 ds-row">
             <ds-input-text 
             [labelInput]="'E-mail'" 
-            [placeholderInputText]="'Insira seu e-mail'"
+            [placeholderInputText]="'Insira seu e-mail'" 
+            [control]="loginForm.controls.email" 
+            [errosCustomizados]="errosPersonalizados"
             ></ds-input-text>
         </div>
  
         <div class="ds-pb-3 ds-row">
-            <ds-input-text
+            <ds-input-text 
                 [labelInput]="'Senha'" 
                 [placeholderInputText]="'Insira a nova senha'"
+                [control]="loginForm.controls.senha"
+                [errosCustomizados]="errosPersonalizados"
             ></ds-input-text>
         </div>
 
         <div class="ds-pb-3 ds-row">
             <ds-checkbox [labelCheckbox]="'Lembrar-me'"></ds-checkbox>
         </div>
- 
+  
         <div class="ds-pb-3 ds-row "> 
             <ds-button 
                 [tipoBotao]="'PRIMARY'"
-                [labelButton]="'Criar conta'"
+                [labelButton]="'Entrar'"
                 class="ds-col-12"
+                (click)="login()"
             ></ds-button>
-        </div>
+        </div> 
 
-    </form>
+    </div>
     
     <div class="ds-row">
         <span>* Campos obrigatórios</span>

@@ -1,12 +1,12 @@
 interface EntryPointResponseError {
-    description: string;
-    codeError: string;
+    descricao: string,
+    codigoErro: string,
 }
 
 export interface IHttpResponse<T = any> {
-    sucess: boolean;
-    code: number;
-    message: string;
-    data: T | null;
+    sucesso: boolean;
+    codigo: number;
+    mensagem: string;
+    dados: T | null;
     error: EntryPointResponseError | null;
 }

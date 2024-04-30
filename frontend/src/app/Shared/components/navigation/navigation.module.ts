@@ -11,7 +11,8 @@ import { SideNavModule } from '@decisaosistemas/angular-ds';
   imports: [
     CommonModule,
     RouterModule,
-    SideNavModule
+    SideNavModule,
+    
   ],
   exports: [
     NavigationComponent

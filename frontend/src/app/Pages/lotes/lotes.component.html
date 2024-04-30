@@ -1,11 +1,11 @@
 <!-- Se houver tituls apareça isso senao apareça esta outra pagina -->
 <div class="enviar-titulos ">
-    <div class="ds-pb-3">
-        <p class="ds-color-gray-500"><strong>Envio de títulos</strong></p>
+    <div>
+        <p class="ds-color-gray-500"><strong>Envio de títulos {{ breadcrumb }}</strong></p>
     </div>
 
     <div class="enviar-titulos-container ds-mb-8 ds-bg-gray-0 ds-border-radius-medium border-rounded">
-        <router-outlet></router-outlet>
+        <router-outlet (breadcrumbFilho)="recebeBreadcrumb($event)"></router-outlet>
     </div>
 </div>
   

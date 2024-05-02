@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdicionarLoteRoutingModule } from './adicionar-lote-routing.module';
 import { AdicionarLoteComponent } from './adicionar-lote.component';
-import { BadgeModule, ButtonModule, InputModule } from '@decisaosistemas/angular-ds';
+import { BadgeModule, ButtonModule, CheckboxModule, IconModule, InputModule } from '@decisaosistemas/angular-ds';
 import { AdicionarInicialModule } from '../components/adicionar-inicial/adicionar-inicial.module';
 import { DuplicataModule } from '../components/duplicata/duplicata.module';
 import { ChequeModule } from '../components/cheque/cheque.module';
@@ -27,7 +27,10 @@ import { ComTituloModule } from '../components/com-titulo/com-titulo.module';
     SemTituloModule,
     ComTituloModule,
     InputModule,
-    ButtonModule
+    ButtonModule,
+    InputModule,
+    CheckboxModule,
+    IconModule
   ]
 })
 export class AdicionarLoteModule { }

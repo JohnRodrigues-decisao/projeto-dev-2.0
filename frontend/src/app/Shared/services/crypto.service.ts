@@ -14,20 +14,26 @@ export class CryptoServiceService {
     return CryptoJS.AES.encrypt(data,this.key).toString();
   }
 
-  decrypt(encryptedData: string): string {
-    if(!encryptedData){
-      throw new Error('Nenhum dado criptografado fornecido.');
-    }
-
+  decrypt(encryptedData: string): any {
     try {
       const bytes = CryptoJS.AES.decrypt(encryptedData, this.key);
-      const decryptedData = bytes.toString(CryptoJS.enc.Utf8);
-      return decryptedData;
-    } catch(error){
+      return bytes.toString(CryptoJS.enc.Utf8);
+    } catch (error) {
       console.error('Erro ao descriptografar os dados:', error);
-      throw new Error('Erro ao descriptografar os dados.');
+      return error;
     }
-
   }
-  
+
+  // decrypt(token: string): any {
+  //   try {
+  //     return jwt_decode(token);
+  //   } catch(Error) {
+  //     return null;
+  //   }
+  // }
 }
+
+function jwt_decode(token: string): any {
+  throw new Error('Function not implemented.');
+}
+

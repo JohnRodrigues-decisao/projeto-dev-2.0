@@ -6,6 +6,8 @@ import { IloginRequest } from '../../Shared/services/models/conta/IloginRequest'
 import { CryptoServiceService } from '../../Shared/services/crypto.service';
 import { ToasterService } from '../../Shared/components/toaster-controller/toaster.service';
 import { ErrorsUtil } from '../../Shared/utils/errorsUtil';
+import jwt_decode from 'jwt-decode';
+
 
 @Component({
   selector: 'app-login',
@@ -49,10 +51,11 @@ export class LoginComponent {
         }
 
         localStorage.setItem('token', dados.dados.token);
-
-        const descodificarDados = this.cryptoService.decrypt(dados.dados.token);
-        console.log(descodificarDados);
-
+        
+        console.log(dados.dados.token);
+        const tokenInfo = this.cryptoService.decrypt(dados.dados.token);
+        
+        // console.log(tokenInfo);
       }
     } catch (error) {
       this.toasterService.showAlert('E-mail ou senha inválido');
@@ -60,4 +63,3 @@ export class LoginComponent {
     }
   }
 }
-  

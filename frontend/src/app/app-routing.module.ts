@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthService } from './Shared/services/auth.service';
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
   {
     path: 'dashboard',
     pathMatch: 'full',
-    loadChildren: () => import('./layouts/logged-layout/logged-layout.module').then((m) => m.LoggedLayoutModule)
+    loadChildren: () => import('./layouts/logged-layout/logged-layout.module').then((m) => m.LoggedLayoutModule),
+    canActivate: [AuthService],
   }
 ];
 

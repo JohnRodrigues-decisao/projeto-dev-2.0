@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { tipoDoTitulo } from '../../../Shared/models/tipoDoTitulo.enum';
-import { NTitulos } from '../../../Shared/models/titulosNamespace';
+// import { NTitulos } from '../../../Shared/models/titulosNamespace';
 import { TituloService } from '../../../Shared/services/http/titulo.service';
+import { CheckboxChangeEvent } from '@decisaosistemas/angular-ds';
 
 @Component({
   selector: 'app-adicionar-lote',
@@ -11,12 +12,27 @@ import { TituloService } from '../../../Shared/services/http/titulo.service';
 })
 export class AdicionarLoteComponent implements OnInit {
   public tipoDoTitulo!: tipoDoTitulo | null;
-  public listarTitulo: NTitulos.IListarTituloInterface[] = [];
+
+  public listaBoxTitulos = [
+    // { qtnTitulos: 23, status: 'não enviado', dataLote: '04/03/2024', dataEnvio: '11/04/2024', valorTotalLote: 123456789 },
+    // { qtnTitulos: 23, status: 'não enviado', dataLote: '04/03/2024', dataEnvio: '11/04/2024', valorTotalLote: 123456789 },
+  ]
+
+  public listaLotes = [
+    {qtnTitulos: 23, status: 'não enviado', dataLote: '04/03/2024', dataEnvio: '11/04/2024', valorTotalLote: 123456789},
+    {qtnTitulos: 23, status: 'não enviado', dataLote: '04/03/2024', dataEnvio: '11/04/2024', valorTotalLote: 123456789},
+    {qtnTitulos: 23, status: 'não enviado', dataLote: '04/03/2024', dataEnvio: '11/04/2024', valorTotalLote: 123456789},
+    {qtnTitulos: 23, status: 'não enviado', dataLote: '04/03/2024', dataEnvio: '11/04/2024', valorTotalLote: 123456789},
+  ]
+
+  changeEvento($event: CheckboxChangeEvent) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private tituloService: TituloService) { }
 
   public async ngOnInit(): Promise<void> {
-    this.listarTitulo = await this.listaBoxTitulos();
+    // this.listarTitulo = await this.listaBoxTitulos();
   }
 
   public formularioCadastroLote = new FormGroup({
@@ -39,10 +55,10 @@ export class AdicionarLoteComponent implements OnInit {
 
   loteCadastroFormSubmit() { }
 
-  public async listaBoxTitulos(): Promise<NTitulos.IListarTituloInterface[]> {
-    const titulosDB = (await this.tituloService.listarTitulo()).dados as NTitulos.IListarTituloInterface[];
-    return titulosDB;
-  }
+  // public async listaBoxTitulos(): Promise<NTitulos.IListarTituloInterface[]> {
+  //   const titulosDB = (await this.tituloService.listarTitulo()).dados as NTitulos.IListarTituloInterface[];
+  //   return titulosDB;
+  // }
 
   public async salvarLote(): Promise<void> {
     console.log(this.formularioCadastroLote)

@@ -13,19 +13,19 @@ export class TituloService {
   constructor(private http: HttpClient) { }
 
   // Listar titulo
-  public async listarTitulo(): Promise<IHttpResponse> {
-    const retornaHttp = this.http.get<IHttpResponse>(`${apiUrl}/titulo`).pipe();
-    const dados = await lastValueFrom(retornaHttp);
-    console.log(dados);
-    return dados;
-  }
+  // public async listarTitulo(): Promise<IHttpResponse> {
+  //   const retornaHttp = this.http.get<IHttpResponse>(`${apiUrl}/titulo`).pipe();
+  //   const dados = await lastValueFrom(retornaHttp);
+  //   console.log(dados);
+  //   return dados;
+  // }
 
   // Adiconar titulo
-  public async adicionarTitulo(pBody: ITitulosRequest): Promise<IHttpResponse> {
-    const retornaHttp = this.http.post<IHttpResponse>(`${apiUrl}/titulo`, pBody).pipe();
-    const dados = await lastValueFrom(retornaHttp);
-    console.log(dados)
-    return dados;
-  }
+  // public async adicionarTitulo(pBody: ITitulosRequest): Promise<IHttpResponse> {
+  //   const retornaHttp = this.http.post<IHttpResponse>(`${apiUrl}/titulo`, pBody).pipe();
+  //   const dados = await lastValueFrom(retornaHttp);
+  //   console.log(dados)
+  //   return dados;
+  // }
 
 }

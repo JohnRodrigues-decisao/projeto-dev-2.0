@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoggedLayoutComponent } from './logged-layout.component';
 import { LotesComponent } from '../../Pages/lotes/lotes.component';
 import { LotesModule } from '../../Pages/lotes/lotes.module';
+import { AuthService } from '../../Shared/services/auth.service';
 
 const routes: Routes = [ 
   {
@@ -14,10 +15,12 @@ const routes: Routes = [
         path: '',
         // canActivate: [AuthService],
         loadChildren: () => import('../../Pages/start/start.module').then((m) => m.StartModule),  
+        canActivate: [AuthService],
       },
       {
         path: 'enviar-titulo',
         loadChildren: () => import('../../Pages/lotes/lotes.module').then((m) => m.LotesModule),
+        canActivate: [AuthService],
       }
     ]
   },

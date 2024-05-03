@@ -51,15 +51,10 @@ export class LoginComponent {
         }
 
         localStorage.setItem('token', dados.dados.token);
-        
-        console.log(dados.dados.token);
-        const tokenInfo = this.cryptoService.decrypt(dados.dados.token);
-        
-        // console.log(tokenInfo);
       }
     } catch (error) {
       this.toasterService.showAlert('E-mail ou senha inválido');
       throw error;
     }
   }
-}
+} 
